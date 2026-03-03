@@ -8,22 +8,36 @@
 - Using Python and one other data visualization software (Excel or free alternative, Tableau Public, any other tool you prefer), create two distinct visualizations from your dataset of choice.  
 - For each visualization, describe and justify: 
     > What software did you use to create your data visualization?
+        I used Python and Excel to create the data visualizations. In Python, I used Pandas library for data cleaning and aggregation, and Seaborn/Matplotlib for visualization. This allows reproducibility, transparent data workflows and control over data transformation prior to visualization.
 
     > Who is your intended audience? 
-    
+        The intended audience is city transportation planners, road safety analysts, and members of the public interested in understanding collision risk patterns. The visualization is designed for non-technical audience.
+
     > What information or message are you trying to convey with your visualization? 
-    
+        The visualization shows how traffic collisions are distributed across the day. The two visualizations (python and excel) display comparisons between accident severity (fatal vs non-fatal collisions split by time of the day) as well as comparing collisions that involve speeding versus those that do not. The key message is that most non-fatal accidents occur between 1pm and 9pm, while fatal accidents are more evenly spread out with spikes observed during evening rush hours. It also shows that speeding related collisions follow a different pattern with a higher relative presence during late night and early morning hours.
+
+
     > What aspects of design did you consider when making your visualization? How did you apply them? With what elements of your plots? 
+        All three design elements were considered for the visualization.
+        Aesthetically, since I was illustrating changes over time, a line chart was used as it best illustrates continuity. Distinct colors were used to differentiate fatal vs non-fatal collisions. The chart is kept neat with ample white space for better readability and additional information is displayed for each datapoint to make it substantive. The perceptual elements were considered by using the spread over 24 hours and aggregating data accordingly with two categories of fatal vs non-fatal and the plot is interactive to show additional information for each data point. For the speeding related collisions, line chart is used to illustrate how the two categories (speeding vs non-speeding) fare across the day. 
     
     > How did you ensure that your data visualizations are reproducible? If the tool you used to make your data visualization is not reproducible, how will this impact your data visualization? 
+        The script downloads the dataset and uses scripted data cleaning and transformation steps. Since there are no manual edits to the data, anyone with the same code can reproduce this visualization. For the excel version, I added a step by step instructions sheet to reproduce the same visualization.
+
     
     > How did you ensure that your data visualization is accessible?  
+        For accessibility, I used high color contrasts, clear axis labels and descriptive title. The reading order is kept logical from left to right, and avoided color only encoding (legend text reinforces meaning)
     
     > Who are the individuals and communities who might be impacted by your visualization?  
-    
+        The visualization could potentially impact drivers, pedestrians and cyclists exposed to risks according to time of the day, communities that advocate for traffic safety, and city officials to make decisions around enforcement timings.
+
+
     > How did you choose which features of your chosen dataset to include or exclude from your visualization? 
-    
+    "Representation- what gets count or not"
+        Used records with valid collission hour, explicit indicators for accident severity and speeding indicators. Records with missing data were excluded to avoid misclassification. 
+
     > What ‘underwater labour’ contributed to your final data visualization product?
+        Understanding the collision data schema, cleaning inconsistent time values as well as converting "Time" values into "Hour" in excel, validating categories, and deciding how to treat missing data. 
 
 - This assignment is intentionally open-ended - you are free to create static or dynamic data visualizations, maps, or whatever form of data visualization you think best communicates your information to your audience of choice! 
 - Total word count should not exceed **(as a maximum) 1000 words** 
